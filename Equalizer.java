@@ -18,13 +18,14 @@ public class Equalizer {
     }
     
     private static void sorok(){
-        for(int i = 0; i < 5; i++){
-            eq();
-        }
+        eq();
+        eq(12);
+        eq();
+        eq(8);
+        eq();
     }
     
     private static void eq(){
-        
         Random rnd = new Random();
         String szoveg = "";
         int hossz = rnd.nextInt(5)+3;
@@ -35,6 +36,15 @@ public class Equalizer {
         }
         System.out.println(szoveg);
     }
-    
+    private static void eq(int hossz){
+        Random rnd = new Random();
+        String szoveg = "";
+        int i = 0;
+        while(i < hossz){
+            szoveg += "\u001B[45m" + " ";
+            i++;
+        }
+        System.out.println(szoveg);
+    }
     
 }
