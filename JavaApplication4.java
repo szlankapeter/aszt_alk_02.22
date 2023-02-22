@@ -1,20 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package javaapplication4;
 
-/**
- *
- * @author szlan
- */
 public class JavaApplication4 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+    }
+    
+    
+    
+    
+    private static void elso10szamOsszege(){
+        int osszeg = 0;
+        for(int i = 0; i < 10; i++){
+            osszeg += i;
+            osszedad(osszeg, i);
+        }
+    }
+    
+    
+    private static void osszedad(int a, int b){
+        System.out.printf("%d + %d = %d\n", a, b, a+b);
     }
     
 }
