@@ -3,27 +3,31 @@ package javaapplication4;
 public class JavaApplication4 {
 
     public static void main(String[] args) {
-        
+        int a = 1;
+        int b = 5;
+        kiir("Az elso 10 szam: " + elso10szamOsszege() + "\n");
+        kiir(String.format("%d + %d = %d",a, b, osszedad(a, b)));
     }
     
     
     
     
-    private static void elso10szamOsszege(){
+    private static int elso10szamOsszege(){
         int osszeg = 0;
         for(int i = 0; i < 10; i++){
             osszeg += i;
-            osszedad(osszeg, i);
         }
-        kiir(osszeg);
+        return osszeg;
     }
     
-    private static void kiir(int osszeg){
-        System.out.println("Az első 10 szám összege: " + osszeg);
+    private static int osszedad(int a, int b){
+        return a+b;
     }
     
-    private static void osszedad(int a, int b){
-        System.out.printf("%d + %d = %d\n", a, b, a+b);
+    private static void kiir(String szoveg){
+        System.out.print(szoveg);
     }
+    
+    
     
 }
