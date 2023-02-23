@@ -27,14 +27,8 @@ public class Equalizer {
     
     private static void eq(){
         Random rnd = new Random();
-        String szoveg = "";
         int hossz = rnd.nextInt(5)+3;
-        int i = 0;
-        while(i < hossz){
-            szoveg += "\u001B[45m" + " ";
-            i++;
-        }
-        System.out.println(szoveg);
+        eq(hossz);
     }
     private static void eq(int hossz){
         Random rnd = new Random();
