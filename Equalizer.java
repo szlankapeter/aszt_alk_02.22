@@ -29,6 +29,12 @@ public class Equalizer {
     private static void eq(){
         eq(rnd.nextInt(5)+3, false);
     }
+    private static void eq(int hossz){
+        eq(hossz, false);
+    }
+    private static void eq(boolean hosszKiir){
+        eq(rnd.nextInt(5)+3, hosszKiir);
+    }
     
     private static void eq(int hossz, boolean hosszKiir){
         String szoveg = "";
