@@ -12,6 +12,7 @@ import java.util.Random;
  */
 public class Equalizer {
     
+    private static final Random rnd = new Random();
     
     public static void main(String[] args) {
         sorok();
@@ -19,26 +20,28 @@ public class Equalizer {
     
     private static void sorok(){
         eq();
-        eq(12);
+        eq(12, true);
         eq();
-        eq(8);
+        eq(8, true);
         eq();
     }
     
     private static void eq(){
-        Random rnd = new Random();
-        int hossz = rnd.nextInt(5)+3;
-        eq(hossz);
+        eq(rnd.nextInt(5)+3, false);
     }
-    private static void eq(int hossz){
-        Random rnd = new Random();
+    
+    private static void eq(int hossz, boolean hosszKiir){
         String szoveg = "";
-        int i = 0;
-        while(i < hossz){
+        for(int i = 0; i < hossz; i++){
             szoveg += "\u001B[45m" + " ";
-            i++;
         }
-        System.out.println(szoveg);
+        if(hosszKiir){
+                System.out.println(szoveg + "\u001B[0m(%d)".formatted(hossz));
+            }
+        else{
+            System.out.println(szoveg);
+        }
     }
+    
     
 }
